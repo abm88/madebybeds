@@ -1,0 +1,28 @@
+<!doctype html>
+
+<script>
+var myApp = angular.module("myModule", []);
+    myApp.controller("myController", function($scope){ 
+    var employee {
+        firstName : "Dave",
+        lastName: "hasel",
+        gender: "Male"
+    };
+    $scope.employee = employee;
+    });
+</script>
+<html >
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <title>My Angular App</title>
+    
+  </head>
+  <body ng-app="myModule">
+      <div ng-controller="myController">
+          <div>
+          First Name : {{employee.firstName}}
+          </div>
+      
+      </div>
+  </body>
+</html>
