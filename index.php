@@ -26,7 +26,7 @@
 					<span class="[ icon-bar ]"></span>
 				</button>
 				<div class="[ animbrand ]">
-					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds</a>
+					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds test io</a>
 				</div>
 			</div>
 
@@ -48,7 +48,7 @@
 					<li>
 						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Resources <span class="[ caret ]"></span></a>
 						<ul class="[ dropdown-menu ]" role="menu">
-							<li><a href="#" class="[ animate ]">Blog <span class="[ pull-right glyphicon glyphicon-pencil ]"></span></a></li>
+							<li><a href="#" class="[ animate ]">Blog spotted <span class="[ pull-right glyphicon glyphicon-pencil ]"></span></a></li>
 							<li><a href="#" class="[ animate ]">List of resources <span class="[ pull-right glyphicon glyphicon-align-justify ]"></span></a></li>
 							<li><a href="#" class="[ animate ]">Download Project <span class="[ pull-right glyphicon glyphicon-cloud-download ]"></span></a></li>
 							<li class="[ dropdown-header ]">Projects Design</li>
