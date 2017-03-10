@@ -56,7 +56,7 @@
             </md-card-icon-actions>
          </md-card-actions>
          <md-card-content>
-            <p>HTML5 is the next major revision of the HTML standard superseding HTML 4.01, XHTML 1.0,</p>
+            <p>HTML5 is the next major revision of the HTML standard superseding HTML 4.01, XHTML 1.0, testing for c9git </p>
          </md-card-content>
       </md-card>
           </div>
@@ -66,7 +66,7 @@
      <br>
      <br>
         <!-- Body Contents End -->
-     </div> <!-- /.container main wrapper -->
+     </div> <!-- /.container main wrapper testing perpose-->
        <?php include('./include/footer.php'); ?>
     
     <?php include('./include/foot.php'); ?>
