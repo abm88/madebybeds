@@ -26,15 +26,13 @@
 					<span class="[ icon-bar ]"></span>
 				</button>
 				<div class="[ animbrand ]">
-<<<<<<< HEAD
-					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds</a>
-=======
-<<<<<<< HEAD
+
+					
+
 					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds test io c9 test</a>
-=======
-					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds test </a>
->>>>>>> 2e1dfe4700377ef25c5239b0f57fed105ae95e0c
->>>>>>> 39ee1e421d48ae7b7a9dad31258e686e901799ad
+
+					
+
 				</div>
 			</div>
 
