@@ -26,7 +26,9 @@
 					<span class="[ icon-bar ]"></span>
 				</button>
 				<div class="[ animbrand ]">
+
 					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds</a>
+
 				</div>
 			</div>
 
