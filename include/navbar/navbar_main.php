@@ -16,20 +16,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
 				<ul class="[ nav navbar-nav navbar-right ]">
-					<li class="[ visible-xs ]">
-						<form action="http://bootsnipp.com/search" method="GET" role="search">
-							<div class="[ input-group ]">
-								<input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets">
-								<span class="[ input-group-btn ]">
-									<button class="[ btn btn-primary ]" type="submit"><span class="[ glyphicon glyphicon-search ]"></span></button>
-									<button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
-								</span>
-							</div>
-						</form>
-					</li>
+					
 					<li><a href="#" class="[ animate ]">About</a></li>
 					<li>
-						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Resources <span class="[ caret ]"></span></a>
+						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Browse Projects <span class="[ caret ]"></span></a>
 						<ul class="[ dropdown-menu ]" role="menu">
 							<li><a href="#" class="[ animate ]">Blog <span class="[ pull-right glyphicon glyphicon-pencil ]"></span></a></li>
 							<li><a href="#" class="[ animate ]">List of resources <span class="[ pull-right glyphicon glyphicon-align-justify ]"></span></a></li>
@@ -41,36 +31,13 @@
 							<li><a href="#" class="[ animate ]">PAL Leader <span class="[ pull-right glyphicon glyphicon-edit ]"></span></a></li>
 						</ul>
 					</li>
-					<li class="[ dropdown ]">
-						<a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Projects <span class="[ caret ]"></span></a>
-						<ul class="[ dropdown-menu ]" role="menu">
-							<li><a href="#" class="[ animate ]">Featured <span class="[ pull-right glyphicon glyphicon-star ]"></span></a></li>
-							<li><a href="#" class="[ animate ]">Tags  <span class="[ pull-right glyphicon glyphicon-tags ]"></span></a></li>
-							<li class="[ dropdown-header ]">Projects by Version</li>
-							<li><a href="#" class="[ animate ]">3.2.0</a></li>
-							<li><a href="#" class="[ animate ]">3.1.0</a></li>
-							<li><a href="#" class="[ animate ]">3.0.3</a></li>
-							<li><a href="#" class="[ animate ]">3.0.1</a></li>
-							<li><a href="#" class="[ animate ]">3.0.0</a></li>
-							<li><a href="#" class="[ animate ]">2.3.2</a></li>
-						</ul>
-					</li>
-					<li><a class="animate" href="user_registration.php">Register</a></li>
+					
+					<li><a class="animate" href="user_registration.php">Request Account</a></li>
 					<li><a class="animate" href="#login">Login</a></li>
-                    <li class="[ hidden-xs ]"><a href="#toggle-search" class="[ animate ]"><span class="[ glyphicon glyphicon-search ]"></span></a></li>
+                    
+				
 				</ul>
 			</div>
 		</div>
-	<div class="[ bootsnipp-search animate ]">
-			<div class="[ container ]">
-				<form action="http://bootsnipp.com/search" method="GET" role="search">
-					<div class="[ input-group ]">
-						<input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets and hit enter">
-						<span class="[ input-group-btn ]">
-							<button class="[ btn btn-danger ]" type="reset"><span class="[ glyphicon glyphicon-remove ]"></span></button>
-						</span>
-					</div>
-				</form>
-			</div>
-		</div>
+	
 	</nav>

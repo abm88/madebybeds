@@ -29,7 +29,7 @@
 
 					
 
-					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds test io c9 test</a>
+					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds </a>
 
 					
 
