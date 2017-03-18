@@ -1,0 +1,20 @@
+/* Jumbotron for search boxes */
+    .container-fluid-colored {
+ background-color: green;
+ min-height: 220px;
+ max-height: 220px;
+ text-align: center;
+}
+.container-fluid-colored h1 {
+ color: white;
+ padding-top: 35px;
+}
+.container-fluid-colored .btn {
+ border-radius: 3px;
+ margin-top: 20px;
+ border: solid 3px white;
+ padding: 10px 50px;
+ text-transform: uppercase;
+ font-weight: bold;
+}
+/* Jumbotron for search boxes ENDS HERE*/
