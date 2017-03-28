@@ -2,21 +2,13 @@
 <?php include('./include/header.php'); ?>
 <?php include('./include/navbar/navbar_main.php'); ?>
 <link rel="stylesheet" type="text/css" href="jumbo_style.css">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> 
+
 <script>
 
 </script>
 <style>
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
-body {
-  background: #ffffff; 
-  color: #414141;
-  font: 400 17px/2em 'Source Sans Pro', sans-serif;
-}
-.project_card{
-  
-}
 
 .select-box {
   cursor: pointer;
@@ -90,7 +82,7 @@ body {
     </div>
     
     <div class="col-lg-4 col-md-3">
-    <form action="#">
+     <form action="#">
   <div class="select-box">
    <label for="select-box1" class="label select-box1"><span class="label-desc">Search by subject</span> </label>
     <select id="select-box1" class="select">
@@ -128,14 +120,59 @@ body {
      </div>  /.jumbotron -->
  <div class="container main_wrapper">
         <!-- Body Contents Start-->
-    <div class="project_card>"
+
      <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m10">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Card Title</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+                <div class="row">
+    <div class="col-lg-4 col-md-3">
+     <form action="#">
+ 
+  <div class="select-box">
+    
+    <label for="select-box1" class="label select-box1"><span class="label-desc">Search by subject</span> </label>
+    <select id="select-box1" class="select">
+      <option value="Choice 1">Falkland Islands</option>
+      <option value="Choice 2">Germany</option>
+      <option value="Choice 3">Neverland</option>
+    </select>
+    
+  </div>
+   
+</form> 
+    </div>
+    
+    <div class="col-lg-4 col-md-3">
+     <form action="#">
+  <div class="select-box">
+   <label for="select-box1" class="label select-box1"><span class="label-desc">Search by subject</span> </label>
+    <select id="select-box1" class="select">
+      <option value="Choice 1">Falkland Islands</option>
+      <option value="Choice 2">Germany</option>
+      <option value="Choice 3">Neverland</option>
+    </select>   
+  </div>
+   
+</form> 
+    </div>
+    <div class="col-lg-4 col-md-3">
+      <form action="#">
+  <div class="select-box">
+    
+    <label for="select-box1" class="label select-box1"><span class="label-desc">Search by subject</span> </label>
+    <select id="select-box1" class="select">
+      <option value="Choice 1">Falkland Islands</option>
+      <option value="Choice 2">Germany</option>
+      <option value="Choice 3">Neverland</option>
+    </select>
+    
+  </div>
+   
+</form> 
+    </div>
+  </div>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
