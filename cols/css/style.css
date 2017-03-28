@@ -1,5 +1,85 @@
-/* YOUR CUSTOM STYLES */
-.navbar-default {
-    background-color: #F8F8F8;
-    border-color: #E7E7E7;
+ /* START Search filter drop box  */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+._search_filters{
+  margin-top: 1cm;
 }
+.select-box {
+  cursor: pointer;
+  position : relative;
+  max-width:  20em;
+  margin: 5em auto;
+  width: 100%;
+}
+
+.select,
+.label {
+  color: #414141;
+  display: block;
+  font: 400 17px/2em 'Source Sans Pro', sans-serif;
+}
+
+.select {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 5px 0;
+  height: 40px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  background: none transparent;
+  border: 0 none;
+}
+.select-box1 {
+  background: #ececec;
+}
+
+.label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.open .label::after {
+   content: "▲";
+}
+.label::after {
+  content: "▼";
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px 15px;
+  border-left: 5px solid #fff;
+} 
+._search_filter_wrapper{
+    position: relative;
+    margin-top: -2cm;
+}
+ /* END Search filter drop box  */
+
+ /* Start TEMPLATE STYLES */
+        
+        main {
+            margin-top: 3rem;
+        }
+        
+        main .card {
+            margin-bottom: 2rem;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .read-more {
+                text-align: center;
+            }
+        }
+        
+        .navbar {
+            background-color: #0f6256;
+        }
+        
+        footer.page-footer {
+            background-color: #0f6256;
+            margin-top: 2rem;
+        }
+        ._wrapper {
+            margin-bottom: 1cm;            
+        }  /* End TEMPLATE STYLES */
