@@ -1,12 +1,14 @@
 
 body {
  font-size: 14px;
- background-color: #edeff2;
+
+
     width: auto;
     height: auto;
 }
 body, h1, h2, h3, h4, h5, h6 {
  font-family: helvetica, arial, sans-serif;
+ background-color: #e6e6e6;
 }
 
 .btn {
