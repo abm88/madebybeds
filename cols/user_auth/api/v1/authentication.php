@@ -5,6 +5,7 @@ $app->get('/session', function() {
     $response["user_id"] = $session['user_id'];
     $response["user_email"] = $session['user_email'];
     $response["user_first_name"] = $session['user_first_name'];
+    
     echoResponse(200, $session);
 });
 
