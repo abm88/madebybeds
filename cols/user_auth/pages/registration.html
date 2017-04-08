@@ -57,10 +57,11 @@
 <!--Naked Form-->
  <div class="row">
      
-    <form class="col s12">
+    <form class="col s12" name="signupForm" role="form">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <input placeholder="Placeholder" id="first_name" name="user_first_name" type="text" class="validate" ng-model="signup.user_first_name">
+
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
@@ -71,7 +72,8 @@
       
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" name="user_email" class="validate form-control" ng-model="signup.user_email">
+          <span ng-show="signupForm.user_email.$error.user_email" class="help-inline">Email is not valid</span> 
           <label for="email">Email</label>
         </div>
       </div>

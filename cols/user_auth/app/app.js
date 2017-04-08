@@ -39,7 +39,7 @@ app.config(['$routeProvider',
             Data.get('session').then(function (results) {
                 if (results.uid) {
                     $rootScope.authenticated = true;
-                    $rootScope.uid = results.uid;
+                    $rootScope.uid = results.user_id;
                     $rootScope.user_first_name = results.user_first_name;
                     $rootScope.user_email = results.user_email;
                 } else {
