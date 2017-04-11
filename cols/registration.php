@@ -14,6 +14,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <title>MadeByBeds</title>
+    <!-- Angular CDN -->
    
 
 
@@ -33,8 +34,7 @@
 
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
-      <!-- Angular CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
    <style>
        .container{
            margin-top: 1cm;
@@ -42,7 +42,7 @@
        </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-app="myapp" ng-controller="usercontroller">
     <!--Naked Form-->
 <div class="card-block">
 
@@ -65,7 +65,6 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <div ng-app="myapp" ng-controller="usercontroller">
           <input id="first_name" type="text" class="validate" ng-model="first_name">
           <label for="first_name">First Name</label>
         </div>
@@ -77,25 +76,25 @@
       
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" type="email" class="validate form-control" ng-model="user_email">
+          <input id="user_email" type="email" class="validate" ng-model="user_email">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="password" type="password" class="validate form-control" ng-model="password">
+          <input id="password" type="password" class="validate" ng-model="password">
           <label for="password">Password</label>
         </div>
      
         <div class="input-field col s6">
-          <input  value="I am not editable" id="re_password" type="password" class="validate form-control">
+          <input  value="I am not editable" id="re_password" type="password" class="validate">
           <label for="re_password">Password Again</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="user_contact" type="text" class="validate form-control" ng-model="user_contact">
+          <input id="user_contact" type="text" class="validate" ng-model="user_contact">
           <label for="user_contact">User Contact</label>
         </div>
       </div>
@@ -107,9 +106,12 @@
       </div>
     </form>
   </div>
-    </div>
     </div>  
-   
+    <script>
+         $(document).ready(function() {
+    Materialize.updateTextFields();
+  });
+        </script>
 <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 
@@ -123,21 +125,21 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
-<script>
-  var app = angular.module("myapp", []);
-  app.controller("usercontroller", function($scope, $http){ 
-    $scope.insertData = function(){
-      $http.post(
-        "insert.php",
-        {'first_name':$scope.first_name, 'last_name':$scope.last_name, 'user_email':$scope.user_email, 'password':$scope.password, 'user_contact':$scope.user_contact,}
-      ).success(function(data){ 
-        alert(data);
-        $scope.first_name = null;
-        $scope.last_name = null;
-        $scope.user_email = null;
-        $scope.password = null;
-        $scope.user_contact = null;
-      });
-    }
-  });
-  </script>
+<script>  
+ var app = angular.module("myapp",[]);  
+ app.controller("usercontroller", function($scope, $http){  
+      $scope.insertData = function(){  
+           $http.post(  
+                "insert.php",  
+                {'first_name':$scope.first_name, 'last_name':$scope.last_name, 'user_email':$scope.user_email, 'password':$scope.password, 'user_contact':$scope.user_contact,}  
+           ).success(function(data){  
+                alert(data);  
+                $scope.first_name = null;  
+                $scope.last_name = null;  
+                $scope.user_email = null;
+                $scope.password = null;
+                $scope.user_contact = null;   
+           });  
+      }  
+ });  
+ </script>  
