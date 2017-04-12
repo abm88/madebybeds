@@ -28,33 +28,49 @@
 
     <header>
         <!--Navbar-->
-        <nav class="navbar navbar-toggleable-md navbar-dark red ">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <strong>MadeByBeds</strong>
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNav1">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
-                        </li>
+        <nav class="navbar navbar-toggleable-md navbar-dark red">
+                    <div class="container">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <strong>Navbar</strong>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNav4">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                            
                         <li class="nav-item">
                             <a class="nav-link" href="../project_search_result/index.html">Browse Projects</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="registration.html">Settings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login_form.html">Log Out</a>
-                        </li>
-                    </ul>
-                   
-                </div>
-            </div>
-        </nav>
+                              
+                         <li class="nav-item">
+                                    <a class="nav-link" href="project_upload.php">Upload Project</a>
+                                </li>      
+                            </ul>
+                         
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link waves-effect waves-light"><i class="fa fa-envelope"></i> Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link waves-effect waves-light"><i class="fa fa-gear"></i> Settings</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user"></i> Profile</a>
+                                    <div class="dropdown-menu dropdown-default dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                       
+                        </div>
+                    </div>
+                </nav>
         <!--/.Navbar-->
     </header>
 
@@ -118,7 +134,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="h1-responsive">Showcase
-                        <small class="text-muted">recipes for launches and desserts </small>
+                        <small class="text-muted">Students Creative Projects </small>
                     </h1>
                 </div>
             </div>

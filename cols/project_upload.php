@@ -47,16 +47,17 @@
        .container{
            margin-top: 1cm;
        }
+      
        </style>
 </head>
 <body>
-    <div class="container" ng-app="myapp" ng-controller="usercontroller">
+    <div class="container" ng-app="myapp" ng-controller="projectUploadcontroller">
     <!--Naked Form-->
 <div class="card-block">
 
     <!--Header-->
     <div class="text-xs-center">
-        <h3><i class="fa fa-user"></i> Project Upload:</h3>
+        <h3><i class="fa fa-user"></i> Project Upload: </h3>
         <hr class="mt-2 mb-2">
     </div>
 
@@ -76,9 +77,9 @@
                <label>Project Subject</label>
     <select class="mdb-select browser-default" id="project_subject" ng-model="project_subject">
           <option value="" disabled selected>Choose Subject</option>
-          <option value="1">Computer Science</option>
-          <option value="2">Robotics</option>
-          <option value="3">Mobile Application</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Mobile Application">Mobile Application</option>
     </select>
       
   </div>
@@ -89,8 +90,8 @@
                <label>Project Type</label>
     <select class="mdb-select browser-default" id="project_type" ng-model="project_type">
           <option value="" disabled selected>Choose Individual/Group</option>
-          <option value="1">Individual Project</option>
-          <option value="2">Group Project</option>
+          <option value="Individual_project">Individual Project</option>
+          <option value="Group_Project">Group Project</option>
          
     </select>
       
@@ -103,23 +104,22 @@
           <label for="project_name">Project Name</label>
         </div>
       
-      
-     
-      
-          <div class="file-field col s6">
+      </div>
+      <div class="row">
+               <div class="file-field col s6">
         <div class="btn btn-primary btn-sm">
             <span>Choose file</span>
             <input type="file">
         </div>
         <div class="file-path-wrapper">
-           <input class="file-path validate" type="text" placeholder="Upload Project Image">
+           <input class="file-path validate disabled" type="text" placeholder="Upload Project Image" ng-model="upload_image">
         </div>
     </div>
         
       </div>
       <div class="row">
          <div class="input-field col s12">
-           <textarea type="text" id="project_description" class="md-textarea"></textarea>
+           <textarea type="text" id="project_description" class="md-textarea" ng-model="project_description"></textarea>
                 <label for="form76">Project Details</label>
         </div
      
@@ -130,7 +130,7 @@
 
       <div class="row">
         <div class="col s12">
-          <input type="submit" name="btnSubmit" class="btn btn-info" ng-click="insertData()" value="Submit"/>
+          <input type="submit" name="btnSubmit" class="btn btn-info" ng-click="insertProject()" value="Submit"/>
         </div>
       </div>
     </form>
@@ -158,18 +158,18 @@
 </html>
 <script>  
  var app = angular.module("myapp",[]);  
- app.controller("usercontroller", function($scope, $http){  
-      $scope.insertData = function(){  
+ app.controller("projectUploadcontroller", function($scope, $http){  
+      $scope.insertProject = function(){  
            $http.post(  
-                "insert.php",  
-                {'first_name':$scope.first_name, 'last_name':$scope.last_name, 'user_email':$scope.user_email, 'password':$scope.password, 'user_contact':$scope.user_contact,}  
+                "insert_project.php",  
+                {'project_subject':$scope.project_subject, 'project_type':$scope.project_type, 'project_name':$scope.project_name, 'project_description':$scope.project_description, 'upload_image':$scope.upload_image,}  
            ).success(function(data){  
                 alert(data);  
-                $scope.first_name = null;  
-                $scope.last_name = null;  
-                $scope.user_email = null;
-                $scope.password = null;
-                $scope.user_contact = null;   
+                $scope.project_subject = null;  
+                $scope.project_type = null;  
+                $scope.project_name = null;
+                $scope.project_description = null;
+                $scope.upload_image = null;   
            });  
       }  
  });  
