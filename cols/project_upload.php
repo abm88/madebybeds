@@ -114,13 +114,14 @@
             <input type="file">
         </div>
         <div class="file-path-wrapper">
-           <input class="file-path validate disabled" type="text" placeholder="Upload Project Image" ng-model="upload_image">
+           <input class="file-path validate" disabled="true" type="text" placeholder="Upload Project Image" ng-model="upload_image">
         </div>
     </div>
         
       </div>
       <div class="row">
          <div class="input-field col s12">
+             <i class="fa fa-pencil prefix"></i>
            <textarea type="text" id="project_description" class="md-textarea" ng-model="project_description"></textarea>
                 <label for="form76">Project Details</label>
         </div
