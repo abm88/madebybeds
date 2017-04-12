@@ -27,15 +27,11 @@
 				</button>
 				<div class="[ animbrand ]">
 
-<<<<<<< HEAD
 					
 
 					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds </a>
 
 					
-=======
-					<a class="[ navbar-brand ][ animate ]" href="#">MadeByBeds</a>
->>>>>>> a2cf13061fb7b120d32850c5cc194df3481a56c0
 
 				</div>
 			</div>
