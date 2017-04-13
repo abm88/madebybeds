@@ -1,4 +1,9 @@
+<?php 
+mysql_connect("localhost","root","") or die ("Not connected");
 
+mysql_selectdb("madebybeds")or die("Database not found");
+
+?>
 
    <!DOCTYPE html>
 <html lang="en" >
@@ -70,7 +75,7 @@
 <!--Naked Form-->
  <div class="row">
      
-    <form class="col s12">
+    <form class="col s12" method="POST" action="project_upload.php" name="form_upload" enctype="multipart/form-data">
       <div class="row">
          <div class="col s6">
                <label>Project Subject</label>
@@ -109,8 +114,8 @@
                <div class="file-field col s6">
            
         <div class="btn btn-primary btn-sm">
-            <span>Choose file</span>
-            <input type="file" name="upload_image" ng-model="upload_image">
+            <span>Choose Image/s</span>
+            <input type="file" name="file_img[]" multiple ng-model="upload_image">
         </div>
         <div class="file-path-wrapper">
            <input class="file-path validate" disabled="true" type="text" placeholder="Upload Project Image">
@@ -185,3 +190,24 @@ $('#myModal').on('shown.bs.modal', function () {
       }  
  });  
  </script>  
+ <?php 
+ if(isset($_POST['btnSubmit'])){
+     for($i = 0; $i<count($filename = $_FILES["file_img"]["name"]); $i++){
+                
+                $filetmp = $_FILES["file_img"]["tmp_name"][$i];
+                $filename = $_FILES["file_img"]["name"][$i];
+                $filetype = $_FILES["file_img"]["type"][$i];
+                $filepath = "images/".$filename;
+                
+            move_uploaded_file($filetmp, $filepath);
+            
+            $sql = "insert into img_upload(img_name, img_path, img_type) values(
+                '$filename',
+                '$filepath',
+                '$filetype'
+                )";
+                $result = mysql_query($sql);
+        }
+ }
+ 
+ ?>
