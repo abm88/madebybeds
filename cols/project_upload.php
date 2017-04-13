@@ -109,27 +109,13 @@
      
       <div class="row">
                <div class="file-field col s6">
-                     <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-             <!--
-        <div class="btn btn-primary btn-sm">
+              <div class="btn btn-primary btn-sm">
             <span>Choose file</span>
             <input type="file" name="upload_image" ng-model="upload_image">
         </div>
         <div class="file-path-wrapper">
            <input class="file-path validate" disabled="true" type="text" placeholder="Upload Project Image">
-           -->
+         
            
         </div>
     </div>
