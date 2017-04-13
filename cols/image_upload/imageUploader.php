@@ -2,7 +2,7 @@
  $connect = mysqli_connect("localhost", "root", "", "madebybeds");  
  if(!empty($_FILES))  
  {  
-      $path = 'upload/' . $_FILES['file']['name'];  
+      $path = 'col/' . $_FILES['file']['name'];  
       if(move_uploaded_file($_FILES['file']['tmp_name'], $path))  
       {  
            $insertQuery = "INSERT INTO tbl_images(name) VALUES ('".$_FILES['file']['name']."')";  

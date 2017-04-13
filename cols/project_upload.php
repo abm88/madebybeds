@@ -111,10 +111,10 @@
                <div class="file-field col s6">
         <div class="btn btn-primary btn-sm">
             <span>Choose file</span>
-            <input type="file">
+            <input type="file" name="upload_image" ng-model="upload_image">
         </div>
         <div class="file-path-wrapper">
-           <input class="file-path validate" disabled="true" type="text" placeholder="Upload Project Image" ng-model="upload_image">
+           <input class="file-path validate" disabled="true" type="text" placeholder="Upload Project Image">
         </div>
     </div>
         
@@ -138,7 +138,8 @@
       </div>
     </form>
   </div>
-    </div>  
+    </div> 
+    
     <script>
          $(document).ready(function() {
     Materialize.updateTextFields();
@@ -157,6 +158,7 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    
 </body>
 </html>
 <script>  

@@ -24,9 +24,13 @@
    <style>
        .container{
            margin-top: 3cm;
-           margin-left: 12cm;
+           margin-left:20cm;
+           
        }
-       
+       .body {
+           background-color: blue;
+       }
+      
        </style>
 </head>
 
@@ -45,8 +49,20 @@
         </div>
 
         <!--Body-->
+        <div class"md-form">
+            
+            <i class="fa fa-user prefix"></i>
+             <label for="project_type">User Type</label>
+          <select class="mdb-select form-control browser-default" id="project_type" ng-model="project_type">
+          <option value="" disabled selected>Choose User</option>
+          <option value="Individual_project">Student</option>
+          <option value="Group_Project">Admin</option>
+         
+    </select>
+            
+        </div>
         <div class="md-form">
-            <i class="fa fa-envelope prefix"></i>
+            <i class="fa fa-envelope prefix small"></i>
             <input type="text" id="form2" class="form-control">
             <label for="form2">Your email</label>
         </div>
