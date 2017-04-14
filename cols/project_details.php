@@ -8,6 +8,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
    
            
           $query = mysql_query("select *from img_upload where id = $del;");
+          //echo $count = count($query);
         while ($row1 = mysql_fetch_array($query)) { 
             $project_image = $row1['img_path'];
             $project_description = $row1['description'];
