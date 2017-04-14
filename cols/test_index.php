@@ -165,7 +165,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
                             <!--Title-->
                             <h4 class="card-title"><?php echo  "Title" ?></h4>
                             <!--Text-->
-                            <p class="card-text"><?php echo  "Decription"; ?></p>
+                            <p class="card-text"><?php echo  $row["description"]; ?></p>
                             <div class="read-more">
                                 <a href="#!" class="btn btn-brown">Read more</a>
                             </div>

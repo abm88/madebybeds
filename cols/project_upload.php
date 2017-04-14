@@ -128,7 +128,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
       <div class="row">
          <div class="input-field col s12">
              <i class="fa fa-pencil prefix"></i>
-           <textarea type="text" id="project_description" class="md-textarea" ng-model="project_description"></textarea>
+           <textarea type="text" id="project_description" class="md-textarea" name="description" ng-model="project_description"></textarea>
                 <label for="form76">Project Details</label>
         </div
      
@@ -198,13 +198,15 @@ $('#myModal').on('shown.bs.modal', function () {
                 $filename = $_FILES["file_img"]["name"][$i];
                 $filetype = $_FILES["file_img"]["type"][$i];
                 $filepath = "images/".$filename;
+                $description = $_POST["description"];
                 
             move_uploaded_file($filetmp, $filepath);
             
-            $sql = "insert into img_upload(img_name, img_path, img_type) values(
+            $sql = "insert into img_upload(img_name, img_path, img_type, description) values(
                 '$filename',
                 '$filepath',
-                '$filetype'
+                '$filetype',
+                '$description'
                 )";
                 $result = mysql_query($sql);
         }
