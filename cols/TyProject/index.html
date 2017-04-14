@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ex-Offenders DB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <?php include('db.php');
+        
+?>
+    
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin Panel</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="request.html">View Requests <span class="badge">3</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Offenders <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="offender_registration.php">Manage offender</a></li>
+            <li><a href="catagory.php">View Catagories</a></li>
+            <li><a href="offenders_list.php">View all offenders</a>
+                <li><a href="offenders_list.php">View Released offenders</a>
+            <li role="separator" class="divider"></li>
+            <li><a href="offender_registeration.php">+ Add offenders</a>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Update offender</a></li>
+          </ul>
+        </li>
+          
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="offender_registration.php">Manage Staff</a></li>
+            <li><a href="staff_list.php">View all staff</a>
+            <li role="separator" class="divider"></li>
+            <li><a href="staff_registration.php">Create staff</a>
+          </ul>
+        </li>
+          
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search by name">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog"></span> Settings<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="agency_registration.php">Manage Agency</a></li>
+              
+            <li><a href="#">View all Agencies</a></li>
+              <li><a href="#">View All Catagory</a></li>
+               <li role="separator" class="divider"></li>
+            <li><a href="#">Manage Staff</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="index.php">Sing out</a></li>
+          </ul>
+             <li><a href="index.php"><span class="glyphicon glyphicon-off"></span> Sign out</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class="jumbotron">
+    <h1>Ex-Offender Management System</h1>
+    <p>We are having large database of Ex-offenders!. Our Affliated Agencies.</p> 
+  </div>
+  <div class="row">
+      <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="thumbnail-small.jpg" alt="offender">
+      <div class="caption">
+        <h3>Other offenders</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <p><a href="profile.php" class="btn btn-primary" role="button">Manage</a> 
+            <a href="#" class="btn btn-default" role="button">View All</a></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="thumbnail-small.jpg" alt="offender">
+      <div class="caption">
+        <h3>Sex offenders</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <p> <a href="profile.php" class="btn btn-primary" role="button">Manage</a>
+            <a href="offenders_list.php" class="btn btn-default" role="button">View All</a></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="thumbnail-small.jpg" alt="offender">
+      <div class="caption">
+        <h3>Child Offender</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <p><a href="profile.php" class="btn btn-primary" role="button">Manage</a> <a href="#" class="btn btn-default" role="button">View All</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <h2>Help</h2>
+  <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading">Our services</div>
+      <div class="panel-body">Affliated Organisations</div>
+        </div>
+            </div>
+
+</div>
+</body>
+</html>

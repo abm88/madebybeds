@@ -166,9 +166,11 @@ mysql_selectdb("madebybeds")or die("Database not found");
                             <h4 class="card-title"><?php echo  "Title" ?></h4>
                             <!--Text-->
                             <p class="card-text"><?php echo  $row["description"]; ?></p>
+                            <form action="project_details.php" method="get">
                             <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
+                                <?php echo "<a href=\"project_details.php?del={$row['id']}\" class=\"btn btn-brown\" id=\"del\">Read more</a>";?>
                             </div>
+                            </form>
                         </div>
                         <!--/.Card content-->
 
@@ -177,11 +179,8 @@ mysql_selectdb("madebybeds")or die("Database not found");
       
                     <!--/.Card-->
                 </div>
-                                                 <?php  }
-            } else {
-                echo "0 results";
-            }
- ?>
+             <?php  }
+                       } else { echo "0 results";     } ?>
                 <!--/.First column-->
 
                 
