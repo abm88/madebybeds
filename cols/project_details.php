@@ -11,6 +11,8 @@ mysql_selectdb("madebybeds")or die("Database not found");
         while ($row1 = mysql_fetch_array($query)) { 
             $project_image = $row1['img_path'];
             $project_description = $row1['description'];
+            $project_url = $row1['project_video_url'];
+            //$video = mysql_real_escape_string($project_url);
             
             ?>
 
@@ -56,7 +58,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
               
             }
             .center_panel_details {
-                background-color: blue;
+               
                  
             }
             .right_side_panel_related_projects{
@@ -122,7 +124,9 @@ mysql_selectdb("madebybeds")or die("Database not found");
 .featured-article .block-title h2 {
 	margin: 0;
 }
-
+.w3-container{
+    margin-top:1cm;
+}
 /* Featured Articles List [BS3]
 --------------------------------------------
 * show the last 3 articles post
@@ -153,7 +157,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
 
                 
                     <p><small><i><?php echo "Menu" ?></i></small></p>
-                 <ul class="collection">
+        <ul class="collection">
         <li class="collection-item dismissable"><div>Details<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
         <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
         <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
@@ -162,19 +166,19 @@ mysql_selectdb("madebybeds")or die("Database not found");
 
                 <p><small><i>Description</i></small></p>
                 <ul class="list-group">
-  <li class="list-group-item justify-content-between glyphicon glyphicon-menu-right">
-    Cras justo odio
-    <span class="glyphicon glyphicon-menu-right"></span>
-  </li>
-  <li class="list-group-item justify-content-between">
-    Dapibus ac facilisis in
-    <span class="badge badge-default badge-pill">2</span>
-  </li>
-  <li class="list-group-item justify-content-between">
-    Morbi leo risus
-    <span class="badge badge-default badge-pill">1</span>
-  </li>
-</ul>
+                      <li class="list-group-item justify-content-between glyphicon glyphicon-menu-right">
+                        Cras justo odio
+                        <span class="glyphicon glyphicon-menu-right"></span>
+                      </li>
+                      <li class="list-group-item justify-content-between">
+                        Dapibus ac facilisis in
+                        <span class="badge badge-default badge-pill">2</span>
+                      </li>
+                      <li class="list-group-item justify-content-between">
+                        Morbi leo risus
+                        <span class="badge badge-default badge-pill">1</span>
+                      </li>
+                    </ul>
 
             </div>
             </div>
@@ -187,11 +191,18 @@ mysql_selectdb("madebybeds")or die("Database not found");
                         <img src="<?php echo $project_image; ?>" style="width:100%">
                         <div class="w3-container">
                           <p><?php echo $project_description; ?></p>
+                          
                         </div>
                       </div>
                     </div>
-                                   
-               
+                        <div class="col6"></div>           
+               <h4 align="center">Porfolio Vedio</h4>
+                          <center>
+                              
+                              <iframe width="420" height="345" src="https://www.youtube.com/embed/<?php echo $project_url; ?>">
+                                </iframe>
+
+                          </center>
             </div>
             </div>
 
@@ -258,7 +269,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
 						<a href="#"><i class="icon-dribbble"></i></a>
 						<a href="#"><i class="icon-youtube"></i></a>
 					</p>
-					<p><small>&copy; Made By Beds. All Rights Reserved. <br>Developed by: <a href="" target="_blank">Abdul Basith</a> </small></p>
+					<p><small>&copy; Made By Beds. All Rights Reserved. <br>Developed by: <a href="test_index.php">Abdul Basith</a> </small></p>
 				</div>
 			</div>
 		</div>

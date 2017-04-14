@@ -125,6 +125,13 @@ mysql_selectdb("madebybeds")or die("Database not found");
     </div>
         
       </div>
+        <div class="row">
+        <div class="input-field col s6">
+          <input id="project_url" type="text" class="validate" name="project_url" ng-model="project_url">
+          <label for="project_url">Project Video URL <small>for example video from youtube</small></label>
+        </div>
+      
+      </div>
       <div class="row">
          <div class="input-field col s12">
              <i class="fa fa-pencil prefix"></i>
@@ -185,7 +192,8 @@ $('#myModal').on('shown.bs.modal', function () {
                 $scope.project_type = null;  
                 $scope.project_name = null;
                 $scope.project_description = null;
-                $scope.upload_image = null;   
+                $scope.upload_image = null;  
+               
            });  
       }  
  });  
@@ -200,13 +208,17 @@ $('#myModal').on('shown.bs.modal', function () {
                 $filepath = "images/".$filename;
                 $description = $_POST["description"];
                 
-            move_uploaded_file($filetmp, $filepath);
+                $project_url = $_POST["project_url"];
+                $project_url = explode('=', $project_url);
+                $project_url = $project_url[1];
+                move_uploaded_file($filetmp, $filepath);
             
-            $sql = "insert into img_upload(img_name, img_path, img_type, description) values(
+            $sql = "insert into img_upload(img_name, img_path, img_type, description, project_video_url) values(
                 '$filename',
                 '$filepath',
                 '$filetype',
-                '$description'
+                '$description',
+                '$project_url'
                 )";
                 $result = mysql_query($sql);
         }
