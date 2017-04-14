@@ -19,7 +19,7 @@
                 <div style="clear:both"></div>  
                 <br /><br />  
                 <div class="col-md-3" ng-repeat="image in images">  
-                     <img ng-src="upload/{{image.name}}" width="200" height="200" style="padding:16px; border:1px solid #f1f1f1; margin:16px;" />  
+                     <img ng-src="col/{{image.name}}" width="200" height="200" style="padding:16px; border:1px solid #f1f1f1; margin:16px;" />  
                 </div>  
            </div>  
       </body>  
