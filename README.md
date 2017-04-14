@@ -7,3 +7,5 @@ Link:
 http://www.plus2net.com/php_tutorial/photo-gallery-v1.php
 
 https://www.sitepoint.com/php-gallery-system-minutes/
+
+http://demos.codingcage.com/load-data/
