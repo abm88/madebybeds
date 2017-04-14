@@ -1,4 +1,13 @@
+<?php 
+mysql_connect("localhost","root","") or die ("Not connected");
 
+mysql_selectdb("madebybeds")or die("Database not found");
+
+                $sql = "SELECT  *from img_upload";
+                $result = mysql_query($sql);
+
+            if ($result == true) {
+                    // output data of each row ?>
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -114,12 +123,14 @@
   </div>
     </div> <!-- Search Wrapper class END -->
    <!-- Search filter closing -->
-       
-       <!--Page heading-->
+      
+   <!--Page heading-->
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="h1-responsive">Showcase
-                        <small class="text-muted">recipes for launches and desserts </small>
+
+    
+                    <h1 class="h1-responsive">Made By
+                        <small class="text-muted">Creative students </small>
                     </h1>
                 </div>
             </div>
@@ -128,26 +139,33 @@
 
             <!--First row-->
             <div class="row">
+             
+                    <?php
+                    while($row = mysql_fetch_assoc($result)) {
+                   
+                        ?><!--<img src="<?php //echo  $row["img_path"]; ?>" alt="Smiley face" height="100" width="100"> -->
                 <!--First column-->
                 <div class="col-lg-3">
                     <!--Card-->
                     <div class="card">
-
+                    
                         <!--Card image-->
                         <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(43).jpg" class="img-fluid" alt="">
+                            
+                            <img src="<?php echo  $row["img_path"]; ?>" class="img-fluid" alt="">
                             <a href="#!">
                                 <div class="mask"></div>
                             </a>
-                        </div>
+                            
+                  </div>
                         <!--/.Card image-->
 
                         <!--Card content-->
                         <div class="card-block">
                             <!--Title-->
-                            <h4 class="card-title">Card title1</h4>
+                            <h4 class="card-title"><?php echo  "Title" ?></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card.</p>
+                            <p class="card-text"><?php echo  "Decription"; ?></p>
                             <div class="read-more">
                                 <a href="#!" class="btn btn-brown">Read more</a>
                             </div>
@@ -155,106 +173,19 @@
                         <!--/.Card content-->
 
                     </div>
+
+      
                     <!--/.Card-->
                 </div>
+                                                 <?php  }
+            } else {
+                echo "0 results";
+            }
+ ?>
                 <!--/.First column-->
 
-                <!--Second column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(52)" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card..</p>
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--/.Second column-->
-
-                <!--Third column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(50).jpg" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card.</p>
-                            
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--/.Third column-->
                 
-                    <!--4th column-->
-                <div class="col-lg-3">
-                      <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(50).jpg" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card.</p>
-                            
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                    <!-- 4th col/.Card-->
-                </div>
-            </div>
-            <!--/.First row-->
+            <!--/.First row END Delet from here-->
 
             <!-- 2nd testing row -->
             <!-- testing collamn wrapper div -->
