@@ -1,10 +1,8 @@
 
 <?php 
-mysql_connect("localhost","root","") or die ("Not connected");
+$connection = mysql_connect("localhost","root","") or die ("Not connected");
 mysql_selectdb("madebybeds")or die("Database not found");
-    ?>
-    
-
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,29 +55,29 @@ mysql_selectdb("madebybeds")or die("Database not found");
         </div>
 
         <!--Body-->
-      <form method="POST" action="login.php" name="login">
+      <form method="POST" action="login.php" name="login_form">
         <div class="md-form">
             <i class="fa fa-envelope prefix small"></i>
-            <input type="text" id="form2" class="form-control" name="user_name">
+            <input type="text" id="user_login" class="form-control" name="user_login">
             <label for="form2">Your email/Username</label>
         </div>
 
         <div class="md-form">
             <i class="fa fa-lock prefix"></i>
-            <input type="password" id="form4" class="form-control" name="password">
+            <input type="password" id="password" class="form-control" name="password">
             <label for="form4">Your password</label>
         </div>
           <div class"md-form">
             
             <i class="fa fa-user prefix"></i>
             
-          <select class="mdb-select form-control browser-default" id="user_type" name="user_type" ng-model="user_type">
+          <select class="mdb-select form-control browser-default" id="user_type" name="user_type" ng-model="user_type" onchange="document.getElementById('selected_user').value=this.options[this.selectedIndex].text">
           <option value="" disabled selected>Choose User</option>
           <option value="Individual_project">Student</option>
-          <option value="Group_Project">Admin</option>
+          <option value="Group_Project">Administrator</option>
          
-    </select>
-            
+        </select>
+         <input type="hidden" name="selected_user" id="selected_user" value="" />   
         </div>
         <div class="text-center">
             <button class="btn btn-deep-purple" type="submit" name="login">Login</button>
@@ -117,34 +115,33 @@ mysql_selectdb("madebybeds")or die("Database not found");
 </html>
 
     
-    <?php
-    if(isset($_POST['login'])){
+    <?php 
+    if(isset($_POST['user_login']) and isset($_POST['password'])){
        
         
-        $user_name = $_POST['user_name'];
+        $user_login =  mysql_real_escape_string($_POST['user_login']);
         $password = $_POST['password'];
-         $query = mysql_query("select *from users where user_login = '$user_name'");
-         
-        while($row = mysql_fetch_array($query)){
-            $count = count($query);
-         
-            if($count>0){
-               $query = mysql_query("select *from users where password = '$password'");
-                    $count1 = count($query);
-                    if ($count1>0) {
-                        header("Location: test_index.php");
-                    } else {
-                        echo 'Wrong Password';
-                    }
-               
-            }else {
-               
-                echo ' No Such User Found';
-            }
-             
-              break;
-         }
         
-    }
-
-?>
+         $query = mysql_query("select *from users where user_login = '$user_login' AND password = '$password'");
+         $user_type = mysql_query("select = user_type_ from users where user_type = 2");
+         
+         $user_type_count = mysql_num_rows($user_type);
+         //$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+         $count = mysql_num_rows($query);
+        if ($count == 1 && $user_type_count>0){
+               // $user_type = mysql_query("select user_type from users where user_type = 1");
+                $_SESSION['user_login'] = $user_login;
+                }else{
+                //3.1.3 If the login credentials doesn't match, he will be shown with an error message.
+                $fmsg = "Invalid Login Credentials.";
+                }
+                }
+                //3.1.4 if the user is logged in Greets the user with message
+                if (isset($_SESSION['user_login'])){
+                $user_login = $_SESSION['user_login'];
+               header("Location: logged_in_page.php");
+                 
+                }else{ 
+                //3.2 When the user visits the page first time, simple login form will be displayed.
+}?>
+ 

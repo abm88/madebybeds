@@ -44,7 +44,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <strong>Navbar</strong>
+                    <strong>MadeByBeds</strong>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav1">
                     <ul class="navbar-nav mr-auto">
@@ -55,10 +55,10 @@ mysql_selectdb("madebybeds")or die("Database not found");
                             <a class="nav-link" href="../project_search_result/index.html">Browse Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="registration.html">Register</a>
+                            <a class="nav-link" href="registration.php">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login_form.html">Login</a>
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                    

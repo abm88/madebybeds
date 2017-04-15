@@ -1,3 +1,9 @@
+<?php 
+
+mysql_connect("localhost","root","") or die ("Not connected");
+mysql_selectdb("madebybeds")or die("Database not found");
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <style>
@@ -34,7 +40,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <a class="navbar-brand" href="#">
-                            <strong>Navbar</strong>
+                            <strong>MadeByBeds</strong>
                         </a>
                         <div class="collapse navbar-collapse" id="navbarNav4">
                             <ul class="navbar-nav mr-auto">
@@ -59,11 +65,11 @@
                                     <a class="nav-link waves-effect waves-light"><i class="fa fa-gear"></i> Settings</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle waves-effect waves-light"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user"></i> Profile</a>
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user"></i> <?php echo $_SESSION['user_login'];?></a>
                                     <div class="dropdown-menu dropdown-default dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                         <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
                                         <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-                                        <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                                        <a class="dropdown-item waves-effect waves-light" href="logout.php">Logout</a>
                                     </div>
                                 </li>
                             </ul>
@@ -562,6 +568,7 @@
                 </div>
                 <!--/.Fourth column-->
             </div>
+       
         </div>
         <!--/.Footer links-->
         <hr>
