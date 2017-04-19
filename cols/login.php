@@ -123,12 +123,13 @@ mysql_selectdb("madebybeds")or die("Database not found");
         $password = $_POST['password'];
         
          $query = mysql_query("select *from users where user_login = '$user_login' AND password = '$password'");
-         $user_type = mysql_query("select = user_type_ from users where user_type = 2");
+         //$user_type1 = mysql_query("select * from users where user_type = '1'");
          
-         $user_type_count = mysql_num_rows($user_type);
+         //$user_type_count = mysqli_num_rows($user_type1);
          //$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
          $count = mysql_num_rows($query);
-        if ($count == 1 && $user_type_count>0){
+        //if ($count == 1 && $user_type_count>0){
+         if ($count == 1){
                // $user_type = mysql_query("select user_type from users where user_type = 1");
                 $_SESSION['user_login'] = $user_login;
                 }else{

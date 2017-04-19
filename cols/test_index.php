@@ -3,7 +3,7 @@ mysql_connect("localhost","root","") or die ("Not connected");
 
 mysql_selectdb("madebybeds")or die("Database not found");
 
-                $sql = "SELECT  *from img_upload";
+                $sql = "SELECT  *from img_upload limit 12";
                 $result = mysql_query($sql);
 
             if ($result == true) {
@@ -11,6 +11,46 @@ mysql_selectdb("madebybeds")or die("Database not found");
 <!DOCTYPE html>
 <html lang="en">
 <style>
+#mask {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#boxes #dialog {
+  width: 750px;
+  height: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+}
+
+#popupfoot {
+  font-size: 16pt;
+  position: absolute;
+  bottom: 0px;
+  width: 250px;
+  left: 180px;
+  margin-bottom: 1cm;
+}
 
 </style>
 <head>
@@ -51,9 +91,13 @@ mysql_selectdb("madebybeds")or die("Database not found");
                         <li class="nav-item active">
                             <a class="nav-link">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="../project_search_result/index.html">Browse Projects</a>
+                        </li> -->
+                         <li class="nav-item">
+                            <a class="nav-link" href="responsive_grid.php">Browse Projects</a>
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="registration.php">Register</a>
                         </li>
@@ -67,6 +111,14 @@ mysql_selectdb("madebybeds")or die("Database not found");
         </nav>
         <!--/.Navbar-->
     </header>
+<div id="boxes">
+  <div id="dialog" class="window">
+    <h3>Dear User,</h3>
+    <p align="left">You are using <b>beta</b> version of Beds projects showcase which is still under development and testing where some components may not work properly.<br><br><br><b>Please</b> leave us feedbacks, your feedbacks will help us to improve system performance and functionality.</p>
+    <div id="popupfoot"> <a href="#" class="close agree"> I agree </a>  </div>
+  </div>
+  <div id="mask"></div>
+</div>
 
     <main>
         <!--Main layout-->
@@ -186,193 +238,7 @@ mysql_selectdb("madebybeds")or die("Database not found");
                 
             <!--/.First row END Delet from here-->
 
-            <!-- 2nd testing row -->
-            <!-- testing collamn wrapper div -->
-            <div class="_wrapper">
-            <div class="row">
-                <!--First column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-                    <div class="card-overlay" style="background-image: url('https://mdbootstrap.com/img/Photos/Exposure/Dark/courses.jpg')">
-
-    <!--Content-->
-    <div class="white-text text-center">
-        <div class="card-block">
-            <h5 class="teal-text"><i class="fa fa-pie-chart"></i> Software</h5>
-            <h3>Project title</h3>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto .</p>
-            <small class="text-muted">Last updated 3 mins ago</small>
-            <a class="btn btn-lg btn-white-outline"><i class="fa fa-clone left"></i> View project</a>
-        </div>
-    </div>
-</div>
-                    <!--/.Card-->
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-                   <div class="card-overlay" style="background-image: url('https://mdbootstrap.com/img/Photos/Exposure/Dark/courses.jpg')">
-
-    <!--Content-->
-    <div class="white-text text-center">
-        <div class="card-block">
-            <h5 class="teal-text"><i class="fa fa-pie-chart"></i> Software</h5>
-            <h3>Project title</h3>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto .</p>
-            <small class="text-muted">Last updated 3 mins ago</small>
-            <a class="btn btn-lg btn-white-outline"><i class="fa fa-clone left"></i> View project</a>
-        </div>
-    </div>
-</div>
-                    <!--/.Card-->
-                </div>
-                <!--/.Second column-->
-
-                <!--Third column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-                    <div class="card-overlay" style="background-image: url('https://mdbootstrap.com/img/Photos/Exposure/Dark/courses.jpg')">
-
-    <!--Content-->
-    <div class="white-text text-center">
-        <div class="card-block">
-            <h5 class="teal-text"><i class="fa fa-pie-chart"></i> Software</h5>
-            <h3>Project title</h3>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto .</p>
-            <small class="text-muted">Last updated 3 mins ago</small>
-            <a class="btn btn-lg btn-white-outline"><i class="fa fa-clone left"></i> View project</a>
-        </div>
-    </div>
-</div>
-                    <!--/.Card-->
-                </div>
-                <!--/.Third column-->
-                
-                    <!--4th column-->
-                <div class="col-lg-3">
-                    <!--Card-->
-            <!--Card-->
-<div class="card-overlay" style="background-image: url('https://mdbootstrap.com/img/Photos/Exposure/Dark/courses.jpg')">
-
-    <!--Content-->
-    <div class="white-text text-center">
-        <div class="card-block">
-            <h5 class="teal-text"><i class="fa fa-pie-chart"></i> Software</h5>
-            <h3>Project title</h3>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto .</p>
-            <small class="text-muted">Last updated 3 mins ago</small>
-            <a class="btn btn-lg btn-white-outline"><i class="fa fa-clone left"></i> View project</a>
-        </div>
-    </div>
-</div>
-<!--/.Card-->
-                    <!-- 4th col/.Card-->
-                </div>
-            </div>
-            <!-- close /2nd testing row -->
-            </div>
-            <!-- closing testing wrapper div  -->
-            <div class="row">
-                <!--First column-->
-                <div class="col-lg-4">
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53)" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-lg-4">
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(49)" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--Second column-->
-
-                <!--Third column-->
-                <div class="col-lg-4">
-                    <!--Card-->
-                    <div class="card">
-
-                        <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51)" class="img-fluid" alt="">
-                            <a href="#!">
-                                <div class="mask"></div>
-                            </a>
-                        </div>
-                        <!--/.Card image-->
-
-                        <!--Card content-->
-                        <div class="card-block">
-                            <!--Title-->
-                            <h4 class="card-title">Card title</h4>
-                            <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="read-more">
-                                <a href="#!" class="btn btn-brown">Read more</a>
-                            </div>
-                        </div>
-                        <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
-                <!--/.Third column-->
-            </div>
-            <!--/.Second row-->
+          </div>
             <hr>
 
             <!--Pagination-->
@@ -522,5 +388,48 @@ mysql_selectdb("madebybeds")or die("Database not found");
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
 </body>
+<script>
+$(document).ready(function() {	
 
+var id = '#dialog';
+	
+//Get the screen height and width
+var maskHeight = $(document).height();
+var maskWidth = $(window).width();
+	
+//Set heigth and width to mask to fill up the whole screen
+$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+//transition effect
+$('#mask').fadeIn(500);	
+$('#mask').fadeTo("slow",0.9);	
+	
+//Get the window height and width
+var winH = $(window).height();
+var winW = $(window).width();
+              
+//Set the popup window to center
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+	
+//transition effect
+$(id).fadeIn(2000); 	
+	
+//if close button is clicked
+$('.window .close').click(function (e) {
+//Cancel the link behavior
+e.preventDefault();
+
+$('#mask').hide();
+$('.window').hide();
+});
+
+//if mask is clicked
+$('#mask').click(function () {
+$(this).hide();
+$('.window').hide();
+});
+
+});
+</script>
 </html>

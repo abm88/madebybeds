@@ -9,26 +9,26 @@ session_start();
 <style>
 
 </style>
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>MadeByBeds</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Main CSS file design -->
-     <link href="css/style.css" rel="stylesheet">
-   
-</head>
+    <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <title>MadeByBeds</title>
+    
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <!-- Main CSS file design -->
+         <link href="css/style.css" rel="stylesheet">
+       
+    </head>
 
 <body>
 
@@ -47,10 +47,15 @@ session_start();
                                 <li class="nav-item active">
                                     <a class="nav-link">Home <span class="sr-only">(current)</span></a>
                                 </li>
-                            
+                         <!--   
                         <li class="nav-item">
                             <a class="nav-link" href="../project_search_result/index.html">Browse Projects</a>
+                        </li> -->
+                        
+                         <li class="nav-item">
+                            <a class="nav-link" href="auth_browse.php">Browse Projects</a>
                         </li>
+                              
                               
                          <li class="nav-item">
                                     <a class="nav-link" href="project_upload.php">Upload Project</a>

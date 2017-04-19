@@ -26,7 +26,8 @@ mysql_selectdb("madebybeds")or die("Database not found");
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
+  
+  
           
         <!--Boostrap 4 CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -49,27 +50,23 @@ mysql_selectdb("madebybeds")or die("Database not found");
                
                
             }
-            .photo { 
+            .col-6 { 
                 background-color: white;                   
                 margin-left: 0.5cm;
                 margin-top: 4cm;
                 padding-top: 0.3cm;
                 padding-left: 0.3cm;
                 padding-right: 0.3cm;
+                padding-bottom: 0.3cm; 
+              
+            }
+            .center_panel_details {
                
-              
+                 
             }
-            
-            .video { 
-                background-color: blu;                   
-                margin-left: 0.5cm;
-                padding:0.2cm; 
-              
-            }
-         
             .right_side_panel_related_projects{
                 background-color: white;
-              
+                margin-top: 6cm;
                 padding-top: 0.3cm;
                 padding-left: 0.3cm;
                 padding-right: 0.3cm;
@@ -85,73 +82,67 @@ mysql_selectdb("madebybeds")or die("Database not found");
               background-color: white;
               height: 2cm;
             }
-            .video_frame{
-                margin-left:3cm;
-            }
             /*  Related projects  */
             /* image thumbnail */
-            .thumb {
-                display: block;
-            	width: 100%;
-            	margin: 0;
-            }
+.thumb {
+    display: block;
+	width: 100%;
+	margin: 0;
+}
 
-            /* Style to article Author */
-            .by-author {
-            	font-style: italic;
-            	line-height: 1.3;
-            	color: #aab6aa;
-            }
+/* Style to article Author */
+.by-author {
+	font-style: italic;
+	line-height: 1.3;
+	color: #aab6aa;
+}
 
-            /* Main Article [Module]
-            -------------------------------------
-            * Featured Article Thumbnail
-            * have a image and a text title.
-            */
-            .featured-article {
-            	width: 482px;
-            	height: 350px;
-            	position: relative;
-            	margin-bottom: 1em;
-            }
-            
-            .featured-article .block-title {
-            	/* Position & Box Model */
-            	position: absolute;
-            	bottom: 0;
-            	left: 0;
-            	z-index: 1;
-            	/* background */
-            	background: rgba(0,0,0,0.7);
-            	/* Width/Height */
-            	padding: .5em;
-            	width: 100%;
-            	/* Text color */
-            	color: #fff;
-            }
-            
-            .featured-article .block-title h2 {
-            	margin: 0;
-            }
-            .w3-container{
-                margin-top:1cm;
-            }
-            .container-fluid{
-                margin-left: 4cm;
-            }
-            /* Featured Articles List [BS3]
-            --------------------------------------------
-            * show the last 3 articles post
-            */
-            
-            .main-list {
-            	padding-left: .5em;
-            }
-            
-            .main-list .media {
-            	padding-bottom: 1.1em;
-            	border-bottom: 1px solid #e8e8e8;
-            }
+/* Main Article [Module]
+-------------------------------------
+* Featured Article Thumbnail
+* have a image and a text title.
+*/
+.featured-article {
+	width: 482px;
+	height: 350px;
+	position: relative;
+	margin-bottom: 1em;
+}
+
+.featured-article .block-title {
+	/* Position & Box Model */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	/* background */
+	background: rgba(0,0,0,0.7);
+	/* Width/Height */
+	padding: .5em;
+	width: 100%;
+	/* Text color */
+	color: #fff;
+}
+
+.featured-article .block-title h2 {
+	margin: 0;
+}
+.w3-container{
+    margin-top:1cm;
+}
+/* Featured Articles List [BS3]
+--------------------------------------------
+* show the last 3 articles post
+*/
+
+.main-list {
+	padding-left: .5em;
+}
+
+.main-list .media {
+	padding-bottom: 1.1em;
+	border-bottom: 1px solid #e8e8e8;
+}
             /* End related projects */
             </style>
         <title></title>
@@ -160,16 +151,15 @@ mysql_selectdb("madebybeds")or die("Database not found");
         
         <div class="container-fluid">
 
-            <h1 align="center">Project Title</h1>
+            <h1 align="center">Project Name</h1>
             <div class="row"> <!-- Row start -->
                        
 
-            <div class="col-3">
+            <div class="col">
             <div class="left_side_panel_menu">
 
                 
-                    <p><small><i><?php echo "About Developer" ?></i></small></p>
-                    <img src="http://www.topplers.org/assets/default_profile_picture-5fe08249cdd9f0f379cf5852453e5ff5.png" class="img-circle" alt="Cinque Terre" width="304" height="236">
+                    <p><small><i><?php echo "Menu" ?></i></small></p>
         <ul class="collection">
         <li class="collection-item dismissable"><div>Details<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
         <li class="collection-item dismissable"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
@@ -195,44 +185,78 @@ mysql_selectdb("madebybeds")or die("Database not found");
 
             </div>
             </div>
-            <div class="col-6 photo">
+            <div class="col-6">
             <div class="center_panel_details">
-              <div class="container">
-                     <img src="<?php echo $project_image; ?>" style="width:100%">
-                          </div>
-                              <p><?php echo $project_description; ?></p>
-                     
-             
-                                
+              
                
-            </div>
-            </div>
-            </div> <!-- first row end -->
-            <div class="row">
-                <div class="col-3"> <!-- right sit related projects -->
-                    <div class="right_side_panel_related_projects">
-                      
-               
-        		
-                    </div>
-                </div>
-                
-                   <div class="col-6 video"> <!-- right sit related projects -->
-                    <div class="right_side_panel_related_projects">
-                          <div class="video_frame">
-                          <h4 align="center">Porfolio Video</h4>
+               <div class="w3-third">
+                      <div class="w3-card-2">
+                        <img src="<?php echo $project_image; ?>" style="width:100%">
+                        <div class="w3-container">
+                          <p><?php echo $project_description; ?></p>
                           
-                            <iframe  width="620" height="445" src="https://www.youtube.com/embed/<?php echo $project_url; ?>">
-                                </iframe>
-               </div>
-        		
+                        </div>
+                      </div>
                     </div>
-                </div>
+                        <div class="col6"></div>           
+               <h4 align="center">Porfolio Vedio</h4>
+                          <center>
+                              
+                              <iframe width="420" height="345" src="https://www.youtube.com/embed/<?php echo $project_url; ?>">
+                                </iframe>
+
+                          </center>
+            </div>
+            </div>
+
+            <div class="col-3"> <!-- right sit related projects -->
+            <div class="right_side_panel_related_projects">
+            <ul>
+              <li>
+                Iterm1
+              </li>
+              <li>
+                Item2
+              </li>
+            </ul>
+        <!--    <ul class="media-list main-list">
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h6 class="media-heading"> asit amet</h6>
+			      <p class="by-author">By Jhon Doe</p>
+			    </div>
+			  </li>
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
+			      <p class="by-author">By Jhon Doe</p>
+			    </div>
+			  </li>
+			  <li class="media">
+			    <a class="pull-left" href="#">
+			      <img class="media-object" src="http://placehold.it/150x90" alt="...">
+			    </a>
+			    <div class="media-body">
+			      <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
+			      <p class="by-author">By Jhon Doe</p>
+			    </div>
+			  </li>
+			</ul> -->
+		
+            </div>
+            </div>
         
             </div>
             </div> <!-- row Ends -->
-           <?php }}    ?>
-           
+           <?php }}
+       
+?>
             <div class="row">
               <div class="col footer">
 
